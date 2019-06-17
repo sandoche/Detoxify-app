@@ -3,8 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "babel-node ./bin/www",
-    "start:dev": "nodemon ./bin/www  --exec babel-node --presets es2015,env"
+    "start": "node ./build/app.js",
+    "start:dev": "nodemon ./bin/www  --exec babel-node --presets es2015,env",
+    "build-app": "babel --presets es2015,env -d ./build ./src -s",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && npm run build-app"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
