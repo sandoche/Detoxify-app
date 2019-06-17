@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "babel-node ./bin/www",
-    "start:dev": "nodemon ./bin/www  --exec babel-node --presets es2015,env"
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./bin/dev  --exec babel-node --presets es2015,env",
+    "transpile": "babel --presets es2015,env -d ./build ./src -s",
+    "copy-assets": "cp -r ./src/views ./build && cp -r ./src/public ./build",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && npm run transpile && npm run copy-assets"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -20,6 +24,7 @@
     "@babel/core": "^7.4.5",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^10.0.0",
