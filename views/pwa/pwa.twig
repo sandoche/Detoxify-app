@@ -1,2 +1,28 @@
-<h1>Hello PWA here</h1>
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ data.title }}</title>
+    <link rel="manifest" href="/pwa/{{ data.appId }}/manifest.json">
+  </head>
+  <body>
+    <header class="header">
+      <h1>{{ data.title }}</h1>
+    </header>
+    <main class="main">
+      <p>Well done you just didn't use {{ data.title }} once again!</p>
+    </main>
+    <footer class="footer">
+    </footer>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js')
+          .then(function() {
+            console.log('Service Worker Registered');
+          });
+      }
+    </script>
+  </body>
+</html>

@@ -8,14 +8,15 @@ router.get('/:appId', async function(req, res, next) {
   res.render('pwa/pwa', { data: appInfos });
 });
 
-router.get('/:appId/manifest.json', async function(req, res, next) {
+router.get('/:appId/manifest\.json', async function(req, res, next) {
   const appInfos = await getAppData(req.params.appId);
-  res.render('pwa/manifest.json', { data: appInfos });
+  res.set('Content-Type', 'application/json');
+  res.render('pwa/manifest', { data: appInfos });
 });
 
-router.get('/:appId/service-worker.js', async function(req, res, next) {
-  const appInfos = await getAppData(req.params.appId);
-  res.render('pwa/service-worker.js', { data: appInfos });
+router.get('/:appId/service-worker\.js', function(req, res, next) {
+  res.set('Content-Type', 'application/javascript');
+  res.render('pwa/service-worker', { appId: req.params.appId });
 });
 
 module.exports = router;
