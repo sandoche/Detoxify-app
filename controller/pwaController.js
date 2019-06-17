@@ -1,17 +1,21 @@
 var express = require('express');
 var router = express.Router();
+import getAppData from '../service/appDataService'
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('pwa/pwa', { title: 'PWA' });
+router.get('/:appId', async function(req, res, next) {
+  const appInfos = await getAppData(req.params.appId);
+  res.render('pwa/pwa', { data: appInfos });
 });
 
-router.get('/manifest.json', function(req, res, next) {
-  res.render('pwa/manifest.json');
+router.get('/:appId/manifest.json', async function(req, res, next) {
+  const appInfos = await getAppData(req.params.appId);
+  res.render('pwa/manifest.json', { data: appInfos });
 });
 
-router.get('/service-worker.js', function(req, res, next) {
-  res.render('pwa/service-worker.js');
+router.get('/:appId/service-worker.js', async function(req, res, next) {
+  const appInfos = await getAppData(req.params.appId);
+  res.render('pwa/service-worker.js', { data: appInfos });
 });
 
 module.exports = router;

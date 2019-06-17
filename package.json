@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "start": "babel-node ./bin/www",
-    "start:dev": "nodemon ./bin/www  --exec babel-node"
+    "start:dev": "nodemon ./bin/www  --exec babel-node --presets es2015,env"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "google-play-scraper": "^6.2.6",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "twig": "~0.10.3"
