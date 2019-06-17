@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ data.title }}</title>
+    <link rel="manifest" href="/pwa/{{ data.appId }}/manifest.json">
+  </head>
+  <body>
+    <header class="header">
+      <h1>{{ data.title }}</h1>
+    </header>
+    <main class="main">
+      <p>Well done you just didn't use {{ data.title }} once again!</p>
+    </main>
+    <footer class="footer">
+    </footer>
+    <script>
+    'use strict';
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
+          reg.onupdatefound = function() {
+            var installingWorker = reg.installing;
+            installingWorker.onstatechange = function() {
+              switch (installingWorker.state) {
+                case 'installed':
+                  if (navigator.serviceWorker.controller) {
+                    console.log('New or updated content is available.');
+                  } else {
+                    console.log('Content is now available offline!');
+                  }
+                  break;
+                case 'redundant':
+                  console.error('The installing service worker became redundant.');
+                  break;
+              }
+            };
+          };
+        }).catch(function(e) {
+          console.error('Error during service worker registration:', e);
+        });
+      });
+    }
+    </script>
+  </body>
+</html>
