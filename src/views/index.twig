@@ -61,7 +61,7 @@
         return `<div class="autocomplete-suggestion" data-appid="${item.appId}"><img src="${item.icon}" class="autocomplete-suggestion__icon">${item.title}</div>`;
       },
       onSelect(event, term, item) {
-        window.location.href = '/pwa/' + item.dataset.appid;
+        window.location.href = '/pwa/' + item.dataset.appid + '/';
       }
     });
   </script>
