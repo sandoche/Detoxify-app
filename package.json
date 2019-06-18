@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "dev": "nodemon ./bin/dev  --exec babel-node --presets es2015,env",
+    "dev": "nodemon ./bin/dev -e js,twig --exec babel-node --presets es2015,env",
     "transpile": "babel --presets es2015,env -d ./build ./src -s",
     "copy-assets": "cp -r ./src/views ./build && cp -r ./src/public ./build",
     "clean": "rm -rf build && mkdir build",
