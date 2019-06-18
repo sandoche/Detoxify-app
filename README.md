@@ -17,3 +17,4 @@
 - [ ] Catch errors
 - [ ] Add google analytics
 - [ ] Add logo and favicon
+- [ ] Update documentation and add a deploy to heroku feature
