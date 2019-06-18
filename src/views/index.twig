@@ -3,4 +3,27 @@
 {% block body %}
   <h1>{{title}}</h1>
   <p>Welcome to {{title}}</p>
+
+  <input id="search" type="text">
+
+  <script src="/javascripts/auto-complete.js"></script>
+  <script>
+    var autocomplete = new autoComplete({
+      selector: "#search",
+      minChars: 3,
+      source: function (term, suggest){
+        console.log('test');
+        fetch('/api/search?q=' + term)
+          .then(function(response) {
+            return response.json();
+          })
+          .then(function(myJson) {
+            suggest(myJson);
+          });
+      },
+      renderItem: function (item, search){
+        return '<div class="autocomplete-suggestion">' + item.title + '</div>';
+      }
+    });
+  </script>
 {% endblock %}
