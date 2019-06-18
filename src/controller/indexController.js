@@ -3,7 +3,8 @@ var router = express.Router();
 import config from '../config.js'
 
 router.get('/', function(req, res, next) {
-  res.render('index', { config });
+  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  res.render('index', { config, url: fullUrl });
 });
 
 module.exports = router;
