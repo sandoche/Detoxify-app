@@ -72,8 +72,9 @@ input:focus {
 
 /* Auto complete */
 .autocomplete-suggestions {
-  text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+  text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: 0px 10px 10px rgba(0,0,0,.5);
   position: absolute; display: none; z-index: 9999; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+  border: 1px solid var(--color-grey-medium); border-radius: 3px;
 }
 .autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
 .autocomplete-suggestion b { font-weight: normal; color: #1f8dd6; }
@@ -130,12 +131,19 @@ input:focus {
 }
 
 .autocomplete-suggestion {
-
+  display: flex;
+  padding: 16px;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--font-size-sm);
 }
 
 .autocomplete-suggestion__icon {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  border-radius: 3px;
+  object-fit: cover;
 }
 
 .search {

@@ -6,7 +6,7 @@
 - [x] Implement search service
 - [x] Implement search controller
 - [x] Implement homepage with search
-- [ ] Implement homepage style & loading animation
+- [x] Implement homepage style & loading animation
 - [ ] Add PWA style
 - [ ] Add the count of PWA and feature for adding a custom message
 - [ ] Add a share feature for PWA and a button to add another app
