@@ -7,21 +7,35 @@
 
   <script src="/javascripts/auto-complete.js"></script>
   <script>
+    var startLoading = function () {
+      console.log('start loading');
+    }
+
+    var stopLoading = function () {
+      console.log('stop loading');
+    }
+
     var autocomplete = new autoComplete({
       selector: "#search",
       minChars: 3,
+      delay: 150,
+      cache: true,
       source: function (term, suggest){
-        console.log('test');
+        startLoading();
         fetch('/api/search?q=' + term)
           .then(function(response) {
             return response.json();
           })
           .then(function(myJson) {
             suggest(myJson);
+            stopLoading();
           });
       },
       renderItem: function (item, search){
-        return '<div class="autocomplete-suggestion">' + item.title + '</div>';
+        return `<div class="autocomplete-suggestion" data-appid="${item.appId}"><img src="${item.icon}" class="icon">${item.title}</div>`;
+      },
+      onSelect(event, term, item) {
+        window.location.href = '/pwa/' + item.dataset.appid;
       }
     });
   </script>
