@@ -1,23 +1,165 @@
+@font-face {
+  font-family: 'gilroy-extrabold';
+  src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+       url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --color-grey-light: #f9f9f9;
+  --color-grey-medium: #d8d8d8;
+  --color-grey-dark: #142533;
+  --color-blue-light: #eff3fe;
+  --color-blue-medium: #6490f0;
+
+  --font-family-titles: 'gilroy-extrabold', 'Roboto', 'Helvetica', 'Arial', Sans-serif;
+  --font-family-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+  --font-size-xl: 52px;
+  --font-size-lg: 24px;
+  --font-size-md: 18px;
+  --font-size-sm: 14px;
+}
+
+/* Global */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light);
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-md);
 }
 
-a {
-  color: #00B7FF;
+input {
+  width: 100%;
+  border: 1px solid var(--color-grey-medium);
+  border-radius: 3px;
+  padding: 12px 20px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.05);
 }
 
+input:focus {
+  outline: none;
+  border: 1px solid var(--color-blue-medium);
+  border-radius: 3px; 
+}
+
+/* Shared */
+
+.accent {
+  color: var(--color-blue-medium);
+}
+
+.container {
+  width: 100%;
+  padding: 0 16px;
+  max-width: 720px;
+  margin: auto;
+}
+
+/* Auto complete */
 .autocomplete-suggestions {
-  text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
-
-  /* core styles should not be changed */
+  text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: 0px 10px 10px rgba(0,0,0,.5);
   position: absolute; display: none; z-index: 9999; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+  border: 1px solid var(--color-grey-medium); border-radius: 3px;
 }
 .autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
 .autocomplete-suggestion b { font-weight: normal; color: #1f8dd6; }
 .autocomplete-suggestion.selected { background: #f0f0f0; }
 
-.icon {
-  height: 25px;
-  width: 25px;
+/* Home */
+
+.home__title {
+  text-align: center;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-xl);
+}
+
+.home__description {
+  text-align: center;
+  font-size: var(--font-size-lg);
+}
+
+.help {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,.05);
+  font-size: var(--font-size-sm);
+  border: 1px solid var(--color-grey-medium);
+  list-style: none;
+  counter-reset: item;
+  padding: 0;
+}
+
+.help__step {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-grey-medium);
+  counter-increment: item;
+}
+
+.help__step:before {
+  margin-right: 10px;
+  margin-top: -4px;
+  content: counter(item);
+  background: var(--color-blue-light);
+  color: var(--color-blue-medium);
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+}
+
+.help__step:last-of-type {
+  border-bottom: none;
+}
+
+.autocomplete-suggestion {
+  display: flex;
+  padding: 16px;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--font-size-sm);
+}
+
+.autocomplete-suggestion__icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 8px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.search {
+  margin-bottom: 32px;
+}
+
+.footer {
+  font-size: var(--font-size-sm);
+  display: flex;
+  justify-content: space-between;
+  margin-top: 64px;
+}
+
+.loader {
+  background-image: url("/images/loader.gif");
+  background-size: 20px 20px;
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
 }
