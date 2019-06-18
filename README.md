@@ -12,6 +12,7 @@
 - [ ] Add a share feature for PWA and a button to add another app
 - [ ] Add a specific message for desktop users
 - [ ] Update the open source doc and a Deploy to heroku button
+- [ ] Implement native library caching
 - [ ] Add caching
 - [ ] Catch errors
 - [ ] Add google analytics
