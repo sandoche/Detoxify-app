@@ -70,7 +70,6 @@ input:focus {
   margin: auto;
 }
 
-
 /* Auto complete */
 .autocomplete-suggestions {
   text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
@@ -148,4 +147,11 @@ input:focus {
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
+}
+
+.loader {
+  background-image: url("/images/loader.gif");
+  background-size: 20px 20px;
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
 }

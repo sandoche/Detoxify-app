@@ -4,7 +4,7 @@
   <main class="home container">
     <h1 class="home__title">{{ config.title }}</h1>
     <p class="home__description">{{ config.description }}</p>
-    <input id="search" type="text" placeholder="Search any app you would like to detox from" class="search">
+    <input id="search" class="search" type="text" placeholder="Search any app you would like to detox from">
     <ol class="help">
       <li class="help__step">Connect to this website with your mobile phone</li>
       <li class="help__step">Use the search bar above to find the app you want to detox from</li>
@@ -21,12 +21,24 @@
 {% block script %}
   <script src="/javascripts/auto-complete.js"></script>
   <script>
-    var startLoading = function () {
-      console.log('start loading');
+    var loading = 0;
+
+    function startLoading() {
+      loading++;
+      updateLoader();
     }
 
-    var stopLoading = function () {
-      console.log('stop loading');
+    function stopLoading() {
+      loading--;
+      updateLoader();
+    }
+
+    function updateLoader() {
+      if(loading > 0) {
+        document.getElementById('search').classList.add('loader');
+      } else {
+        document.getElementById('search').classList.remove('loader');
+      }
     }
 
     var autocomplete = new autoComplete({
