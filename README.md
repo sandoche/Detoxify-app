@@ -9,6 +9,8 @@
 - [ ] Add PWA style
 - [ ] Add the count of PWA and feature for adding a custom message
 - [ ] Add a share feature for PWA and a button to add another app
-- [ ] update the open source doc and a Deploy to heroku button
+- [ ] Add a specific message for desktop users
+- [ ] Update the open source doc and a Deploy to heroku button
 - [ ] Add caching
 - [ ] Add google analytics
+- [ ] Add logo and favicon
