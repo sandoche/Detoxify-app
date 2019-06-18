@@ -1,10 +1,20 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-  <h1>{{ config.title }}</h1>
+  <main class="home container">
+    <h1 class="home__title">{{ config.title }}</h1>
+    <p class="home__description">{{ config.description }}</p>
+    <input id="search" type="text" placeholder="Search any app you would like to detox from">
+    <ol class="help">
+      <li class="help__step">Connect to this website with your mobile phone</li>
+      <li class="help__step">Use the search bar above to find the app you want to detox from</li>
+      <li class="help__step">Use the PWA feature of your phone to install the website in your phone</li>
+      <li class="help__step">If you are brave enough, uninstall the app you want to detox from</li>
+    </ol>
+  </main>
+{% endblock %}
 
-  <input id="search" type="text">
-
+{% block script %}
   <script src="/javascripts/auto-complete.js"></script>
   <script>
     var startLoading = function () {
@@ -32,7 +42,7 @@
           });
       },
       renderItem: function (item, search){
-        return `<div class="autocomplete-suggestion" data-appid="${item.appId}"><img src="${item.icon}" class="icon">${item.title}</div>`;
+        return `<div class="autocomplete-suggestion" data-appid="${item.appId}"><img src="${item.icon}" class="autocomplete-suggestion__icon">${item.title}</div>`;
       },
       onSelect(event, term, item) {
         window.location.href = '/pwa/' + item.dataset.appid;

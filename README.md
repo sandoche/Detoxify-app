@@ -18,6 +18,7 @@
 - [ ] Add google analytics
 - [ ] Add logo and favicon
 - [ ] Make it SEO Friendly
+- [ ] Add links to Github and donations
 - [ ] Update config.js
 - [ ] Update package.json
 - [ ] Update documentation and add a deploy to heroku feature

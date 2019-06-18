@@ -2,20 +2,16 @@
 <html>
   <head>
     <title>{{ config.title }}</title>
-
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-
     <meta content="{{ config.description }}" name="description"/>
     <meta content="{{ config.keywords }}" name="keywords"/>
     <meta content="Sandoche ADITTANE & Farbod SARAF" name="author">
     <link href="{{ url }}" rel="canonical"/>
     <meta content="all, follow" name="robots"/>
-
     <link href="favicon.png" rel="shortcut icon">
     <link href="favicon.png" rel="icon" type="image/x-icon"/>
-
     <meta content="en_US" property="og:locale"/>
     <meta content="website" property="og:type"/>
     <meta content="{{ config.title }}" property="og:title"/>
@@ -27,8 +23,11 @@
     <meta content="{{ config.description }}" name="twitter:description"/>
     <meta content="{{ config.title }}" name="twitter:title"/>
     <meta content="favicon.png" name="twitter:image"/>
-    <link href='/stylesheets/style.css' rel='stylesheet'/>
+    <link href='/stylesheets/style.css' rel='stylesheet'/> 
+    {% block style %}{% endblock %}
+  </head>
   <body>
-    {% block body %}{% endblock %}
+      {% block body %}{% endblock %}
+      {% block script %}{% endblock %}
   </body>
 </html>

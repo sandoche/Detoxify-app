@@ -1,10 +1,43 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'gilroy-extrabold';
+  src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+       url('../fonts/gilroy-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-a {
-  color: #00B7FF;
+:root {
+  --color-grey-light: #f9f9f9;
+  --color-grey-medium: #d8d8d8;
+  --color-grey-dark: #142533;
+  --color-blue-light: #eff3fe;
+  --color-blue-medium: #6490f0;
+
+  --font-family-titles: 'gilroy-extrabold', 'Roboto', 'Helvetica', 'Arial', Sans-serif;
+  --font-family-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+  --font-size-lg: 52px;
+  --font-size-md: 18px;
+  --font-size-sm: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light);
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-md);
 }
 
 .autocomplete-suggestions {
@@ -17,7 +50,53 @@ a {
 .autocomplete-suggestion b { font-weight: normal; color: #1f8dd6; }
 .autocomplete-suggestion.selected { background: #f0f0f0; }
 
-.icon {
+.container {
+  width: 100%;
+  padding: 0 32px;
+  max-width: 720px;
+  margin: auto;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--color-grey-medium);
+  border-radius: 3px;
+  padding: 12px 20px;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--color-blue-medium);
+  border-radius: 3px; 
+}
+
+.home {
+
+}
+
+.home__title {
+  text-align: center;
+  font-family: var(--font-family-titles);
+  font-size: var(--font-size-lg);
+}
+
+.home__description {
+  text-align: center;
+}
+
+.help {
+
+}
+
+.help__step {
+
+}
+
+.autocomplete-suggestion {
+
+}
+
+.autocomplete-suggestion__icon {
   height: 25px;
   width: 25px;
 }
