@@ -20,6 +20,7 @@
 - [ ] Add logo and favicon
 - [ ] Make it SEO Friendly
 - [ ] Add links to Github and donations
+- [ ] Redesign homepage with new wording
 - [ ] Add caching
 - [ ] Update config.js
 - [ ] Update package.json
