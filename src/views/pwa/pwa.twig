@@ -27,10 +27,10 @@
       </div>
       <div class="card">
         <p class="emoji">🙌</p>
-        <p class="card__text"><strong>Well done you just didn't use {{ data.title }} once again!</strong></p>
+        <p class="card__text">Well done you opened {{ data.title }} detox app <strong><span id="counter">1</span> time</strong>!</strong></p>
       </div>
       <div class="card">
-        <p class="card__text"><strong>You can now safely go back to your work!</strong></p>
+        <p class="card__text"><strong>You can now close it and safely go back to your work!</strong></p>
       </div>
       <div class="card">
         <p class="emoji">❤️</p>
@@ -72,6 +72,14 @@
         });
       });
     }
+    </script>
+    <script>
+    var counter = document.getElementById('counter');
+    var localStorage = window.localStorage;
+    var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
+    counterValue++;
+    counter.innerHTML = counterValue;
+    localStorage.setItem('{{ data.appId }}-counter', counterValue);
     </script>
   </body>
 </html>

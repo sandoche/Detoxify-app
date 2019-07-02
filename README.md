@@ -8,7 +8,7 @@
 - [x] Implement homepage with search
 - [x] Implement homepage style & loading animation
 - [x] Implement native library caching
-- [ ] Add PWA style
+- [x] Add PWA style
 - [ ] Add the count of PWA and feature for adding a custom message
 - [ ] Add a share feature for PWA and a button to add another app
 - [ ] Add a specific message for desktop users

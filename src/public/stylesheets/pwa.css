@@ -38,17 +38,13 @@ h1, h2, h3, h4, h5, p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-medium);
+  box-shadow: 0 4px 24px rgba(32,43,54,.12);
   padding: 8px 16px;
   position: fixed;
   background-color: #fff;
   width: 100%;
   top: 0;
   left: 0;
-}
-
-.header__title {
-
 }
 
 .header__icon {
