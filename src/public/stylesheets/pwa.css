@@ -58,9 +58,25 @@ h1, h2, h3, h4, h5, p {
 }
 
 .main {
-  margin-top: 80px;
+  margin-top: 60px;
+  padding: 16px;
 }
 
 .card {
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 24px rgba(32,43,54,.08);
+}
 
+.card__text {
+  font-size: var(--font-size-md);
+}
+
+.emoji {
+  font-size: 42px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  float: left;
 }
