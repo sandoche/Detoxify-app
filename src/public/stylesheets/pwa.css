@@ -1,0 +1,66 @@
+:root {
+  --color-grey-dark: #142533;
+  --color-grey-medium: #d8d8d8;
+  --color-grey-light: #f9f9f9;
+  --color-blue: #2329D6;
+
+  --font-family-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+  --font-size-xl: 52px;
+  --font-size-lg: 24px;
+  --font-size-md: 18px;
+  --font-size-sm: 14px;
+}
+
+/* Global */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-default);
+  color: var(--color-grey-dark);
+  background-color: var(--color-grey-light);
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-medium);
+  padding: 8px 16px;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header__title {
+
+}
+
+.header__icon {
+  margin-left: 8px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.main {
+  margin-top: 80px;
+}
+
+.card {
+
+}
