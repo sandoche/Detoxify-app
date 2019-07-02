@@ -80,3 +80,53 @@ h1, h2, h3, h4, h5, p {
   margin-right: 16px;
   float: left;
 }
+
+.card__icon {
+  height: 42px;
+  width: 42px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  float: left;
+}
+
+.button {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  text-decoration: none;
+  width: 100%;
+}
+
+.button--light {
+  color: var(--color-grey-dark);
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.button--light:hover {
+  color: var(--color-grey-dark);
+  background-color: #e2e6ea;
+  border-color: #e2e6ea;
+}
+
+.card__text--space {
+  margin-bottom: 8px;
+}
+
+.footer {
+  text-align: center;
+  padding: 32px;
+}
