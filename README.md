@@ -9,10 +9,10 @@
 - [x] Implement homepage style & loading animation
 - [x] Implement native library caching
 - [x] Add PWA style
-- [ ] Add the count of PWA and feature for adding a custom message
+- [x] Add the count of PWA and feature for adding a custom message
+- [x] Add a guide to install it
+- [ ] Add container for desktop
 - [ ] Add a share feature for PWA and a button to add another app
-- [ ] Add a specific message for desktop users
-- [ ] Add a guide to install it
 - [ ] Catch errors
 - [ ] Add google analytics
 - [ ] Add logo and favicon

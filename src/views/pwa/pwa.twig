@@ -30,7 +30,14 @@
         <p class="card__text">Well done you opened {{ data.title }} detox app <strong><span id="counter">1</span> time</strong>!</strong></p>
       </div>
       <div class="card">
-        <p class="card__text"><strong>You can now close it and safely go back to your work!</strong></p>
+        <p class="card__text" id="motive-display">
+          <strong id="motive">You can now close it and safely go back to your work!</strong>
+          <span class="edit-button" id="edit"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="newIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="newIconTitle">New</title> <path d="M19 14V22H2.99997V4H13"/> <path d="M17.4608 4.03921C18.2418 3.25817 19.5082 3.25816 20.2892 4.03921L20.9608 4.71079C21.7418 5.49184 21.7418 6.75817 20.9608 7.53921L11.5858 16.9142C11.2107 17.2893 10.702 17.5 10.1716 17.5L7.5 17.5L7.5 14.8284C7.5 14.298 7.71071 13.7893 8.08579 13.4142L17.4608 4.03921Z"/> <path d="M16.25 5.25L19.75 8.75"/> </svg></span>
+        </p>
+        <form id="motive-form" class="motive-form">
+          <input type="text" id="motive-input" class="card__text--space">
+          <button class="button button--light">Save</button>
+        </form>
       </div>
       <div class="card">
         <p class="emoji">❤️</p>
@@ -46,40 +53,67 @@
       <p>Made with ❤️ in Europe 🇪🇺<br>by <a href="http://www.sandoche.com" target="_blank">Sandoche</a> &amp; <a href="http://www.farbodsaraf.com" target="_blank">Farbod</a></p>
     </footer>
     <script>
-    'use strict';
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
-          reg.onupdatefound = function() {
-            var installingWorker = reg.installing;
-            installingWorker.onstatechange = function() {
-              switch (installingWorker.state) {
-                case 'installed':
-                  if (navigator.serviceWorker.controller) {
-                    console.log('New or updated content is available.');
-                  } else {
-                    console.log('Content is now available offline!');
-                  }
-                  break;
-                case 'redundant':
-                  console.error('The installing service worker became redundant.');
-                  break;
-              }
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
+            reg.onupdatefound = function() {
+              var installingWorker = reg.installing;
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    if (navigator.serviceWorker.controller) {
+                      console.log('New or updated content is available.');
+                    } else {
+                      console.log('Content is now available offline!');
+                    }
+                    break;
+                  case 'redundant':
+                    console.error('The installing service worker became redundant.');
+                    break;
+                }
+              };
             };
-          };
-        }).catch(function(e) {
-          console.error('Error during service worker registration:', e);
+          }).catch(function(e) {
+            console.error('Error during service worker registration:', e);
+          });
         });
-      });
-    }
+      }
     </script>
+
     <script>
-    var counter = document.getElementById('counter');
-    var localStorage = window.localStorage;
-    var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
-    counterValue++;
-    counter.innerHTML = counterValue;
-    localStorage.setItem('{{ data.appId }}-counter', counterValue);
+      var counter = document.getElementById('counter');
+      var localStorage = window.localStorage;
+      var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
+      counterValue++;
+      counter.innerHTML = counterValue;
+      localStorage.setItem('{{ data.appId }}-counter', counterValue);
+    </script>
+
+    <script>
+      var motiveTextPlaceholder = document.getElementById('motive');
+      var localStorage = window.localStorage;
+      var motiveText = localStorage.getItem('{{ data.appId }}-motive') ? localStorage.getItem('{{ data.appId }}-motive') : 'You can now close it and safely go back to your work!';
+      var editButton = document.getElementById('edit');
+      var motiveDisplay = document.getElementById('motive-display');
+      var motiveForm = document.getElementById('motive-form');
+      var motiveInput = document.getElementById('motive-input');
+
+      motiveTextPlaceholder.innerHTML = motiveText;
+
+      editButton.addEventListener('click', function() {
+        motiveDisplay.style.display = 'none';
+        motiveForm.style.display = 'block';
+        motiveInput.value = motiveTextPlaceholder.innerHTML;
+      });
+
+      motiveForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        motiveTextPlaceholder.innerHTML = motiveInput.value;
+        motiveDisplay.style.display = 'block';
+        motiveForm.style.display = 'none';
+        localStorage.setItem('{{ data.appId }}-motive', motiveInput.value);
+      });
     </script>
   </body>
 </html>
