@@ -8,43 +8,112 @@
     <link rel="manifest" href="/pwa/{{ data.appId }}/manifest.json">
     <link rel="apple-touch-icon" sizes="512x512" href="{{ data.icon }}">
     <link rel="icon" type="image/png" href="{{ data.icon }}" />
+    <link href='/stylesheets/pwa.css' rel='stylesheet'/> 
   </head>
   <body>
     <header class="header">
-      <h1>{{ data.title }}</h1>
+      <h1 class="header__title">{{ data.title }}</h1>
+      <div class="header__icons">
+        <span class="header__icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="26px" height="26px" viewBox="0 0 24 24" aria-labelledby="favouriteIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="favouriteIconTitle">Donate</title> <path d="M12,21 L10.55,19.7051771 C5.4,15.1242507 2,12.1029973 2,8.39509537 C2,5.37384196 4.42,3 7.5,3 C9.24,3 10.91,3.79455041 12,5.05013624 C13.09,3.79455041 14.76,3 16.5,3 C19.58,3 22,5.37384196 22,8.39509537 C22,12.1029973 18.6,15.1242507 13.45,19.7149864 L12,21 Z"/> </svg></span>
+        <span class="header__icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="28px" height="28px" viewBox="0 0 24 24" aria-labelledby="shareAndroidIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="shareAndroidIconTitle">Share</title> <path d="M16 8L8 11 16 8zM16 16L8 13 16 16z"/> <circle cx="6" cy="12" r="2"/> <circle cx="18" cy="7" r="2"/> <circle cx="18" cy="17" r="2"/> </svg></span>
+        <span class="header__icon"><a href="/"><svg width="28px" height="28px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="appsAltIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="appsAltIconTitle">Get another app</title> <rect x="5" y="5" width="2" height="2"/> <rect x="11" y="5" width="2" height="2"/> <rect x="17" y="5" width="2" height="2"/> <rect x="5" y="11" width="2" height="2"/> <rect x="11" y="11" width="2" height="2"/> <rect x="17" y="11" width="2" height="2"/> <rect x="5" y="17" width="2" height="2"/> <rect x="11" y="17" width="2" height="2"/> <rect x="17" y="17" width="2" height="2"/> </svg></a></span>
+      </div>
     </header>
     <main class="main">
-      <p>Well done you just didn't use {{ data.title }} once again!</p>
+      <div class="card">
+        <img src="{{ data.icon }}" class="card__icon"/>
+        <p class="card__text card__text--space">Don't forget to install the Progressive Web App for a better detox!</p>
+        <a href="https://www.techrepublic.com/article/how-to-use-progressive-web-apps-on-android/" class="button button--light" target="_blank">How to do it ?</a>
+      </div>
+      <div class="card">
+        <p class="emoji">🙌</p>
+        <p class="card__text">Well done you opened {{ data.title }} detox app <strong><span id="counter">1</span> time</strong>!</strong></p>
+      </div>
+      <div class="card">
+        <p class="card__text" id="motive-display">
+          <strong id="motive">You can now close it and safely go back to your work!</strong>
+          <span class="edit-button" id="edit"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="newIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="newIconTitle">New</title> <path d="M19 14V22H2.99997V4H13"/> <path d="M17.4608 4.03921C18.2418 3.25817 19.5082 3.25816 20.2892 4.03921L20.9608 4.71079C21.7418 5.49184 21.7418 6.75817 20.9608 7.53921L11.5858 16.9142C11.2107 17.2893 10.702 17.5 10.1716 17.5L7.5 17.5L7.5 14.8284C7.5 14.298 7.71071 13.7893 8.08579 13.4142L17.4608 4.03921Z"/> <path d="M16.25 5.25L19.75 8.75"/> </svg></span>
+        </p>
+        <form id="motive-form" class="motive-form">
+          <input type="text" id="motive-input" class="card__text--space">
+          <button class="button button--light">Save</button>
+        </form>
+      </div>
+      <div class="card">
+        <p class="emoji">❤️</p>
+        <p class="card__text">Like this App ?<br>Donate to show your love.</p>
+        <a href="" class="button button--light">Donate</a>
+      </div>
+      <div class="card">
+        <p class="card__text card__text--space">This project is open source, feel free to contribute.</p>
+        <a href="https://github.com/sandoche/Detox-pwa" class="button button--light" target="_blank">Fork on Github</a>
+      </div>
     </main>
     <footer class="footer">
+      <p>Made with ❤️ in Europe 🇪🇺<br>by <a href="http://www.sandoche.com" target="_blank">Sandoche</a> &amp; <a href="http://www.farbodsaraf.com" target="_blank">Farbod</a></p>
     </footer>
     <script>
-    'use strict';
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
-          reg.onupdatefound = function() {
-            var installingWorker = reg.installing;
-            installingWorker.onstatechange = function() {
-              switch (installingWorker.state) {
-                case 'installed':
-                  if (navigator.serviceWorker.controller) {
-                    console.log('New or updated content is available.');
-                  } else {
-                    console.log('Content is now available offline!');
-                  }
-                  break;
-                case 'redundant':
-                  console.error('The installing service worker became redundant.');
-                  break;
-              }
+      'use strict';
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/pwa/{{ data.appId }}/service-worker.js', { scope: '/pwa/{{ data.appId }}/' }).then(function(reg) {
+            reg.onupdatefound = function() {
+              var installingWorker = reg.installing;
+              installingWorker.onstatechange = function() {
+                switch (installingWorker.state) {
+                  case 'installed':
+                    if (navigator.serviceWorker.controller) {
+                      console.log('New or updated content is available.');
+                    } else {
+                      console.log('Content is now available offline!');
+                    }
+                    break;
+                  case 'redundant':
+                    console.error('The installing service worker became redundant.');
+                    break;
+                }
+              };
             };
-          };
-        }).catch(function(e) {
-          console.error('Error during service worker registration:', e);
+          }).catch(function(e) {
+            console.error('Error during service worker registration:', e);
+          });
         });
+      }
+    </script>
+
+    <script>
+      var counter = document.getElementById('counter');
+      var localStorage = window.localStorage;
+      var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
+      counterValue++;
+      counter.innerHTML = counterValue;
+      localStorage.setItem('{{ data.appId }}-counter', counterValue);
+    </script>
+
+    <script>
+      var motiveTextPlaceholder = document.getElementById('motive');
+      var localStorage = window.localStorage;
+      var motiveText = localStorage.getItem('{{ data.appId }}-motive') ? localStorage.getItem('{{ data.appId }}-motive') : 'You can now close it and safely go back to your work!';
+      var editButton = document.getElementById('edit');
+      var motiveDisplay = document.getElementById('motive-display');
+      var motiveForm = document.getElementById('motive-form');
+      var motiveInput = document.getElementById('motive-input');
+
+      motiveTextPlaceholder.innerHTML = motiveText;
+
+      editButton.addEventListener('click', function() {
+        motiveDisplay.style.display = 'none';
+        motiveForm.style.display = 'block';
+        motiveInput.value = motiveTextPlaceholder.innerHTML;
       });
-    }
+
+      motiveForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        motiveTextPlaceholder.innerHTML = motiveInput.value;
+        motiveDisplay.style.display = 'block';
+        motiveForm.style.display = 'none';
+        localStorage.setItem('{{ data.appId }}-motive', motiveInput.value);
+      });
     </script>
   </body>
 </html>

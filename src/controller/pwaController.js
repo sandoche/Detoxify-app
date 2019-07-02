@@ -38,6 +38,7 @@ router.get('/:appId/service-worker\.js', function(req, res, next) {
  const PRECACHE_URLS = [
    '/pwa/${req.params.appId}/',
    '/pwa/${req.params.appId}',
+   '/stylesheets/pwa.css'
  ];
  
  // The install handler takes care of precaching the resources we always need.
