@@ -13,7 +13,7 @@
 - [x] Add a guide to install it
 - [x] Add button to add another app
 - [x] Hide the guide when PWA installed - https://stackoverflow.com/questions/51735869/check-if-user-has-already-installed-pwa-to-homescreen-on-chrome
-- [ ] Add container for desktop
+- [x] Add container for desktop
 - [x] Add an install button - https://generative.fm/
 - [ ] Add a share feature for PWA
 - [ ] Redesign homepage with new wording
