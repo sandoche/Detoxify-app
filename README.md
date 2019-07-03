@@ -28,4 +28,4 @@
 - [ ] Add caching
 - [ ] Update config.js
 - [ ] Update package.json
-- [ ] Update documentation and add a deploy to heroku feature
+- [ ] Update documentation (use a generator) and add a deploy to heroku feature
