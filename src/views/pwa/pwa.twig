@@ -116,6 +116,10 @@
       });
     </script>
     <script>
+      if (window.matchMedia('(display-mode: standalone)').matches) {  
+        document.getElementById('install-card').style.display = 'none';
+      }
+
       window.addEventListener('beforeinstallprompt', (event) => {
         window.deferredPrompt = event;
       });
