@@ -15,6 +15,8 @@
 - [x] Hide the guide when PWA installed - https://stackoverflow.com/questions/51735869/check-if-user-has-already-installed-pwa-to-homescreen-on-chrome
 - [x] Add container for desktop
 - [x] Add an install button - https://generative.fm/
+- [ ] Hide the install button and replace by a tutorial when needed
+- [ ] Fix responsive for long titles
 - [ ] Add a share feature for PWA
 - [ ] Redesign homepage with new wording
 - [ ] Add latest app on the homepage 
