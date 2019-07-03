@@ -35,10 +35,6 @@ h1, h2, h3, h4, h5, p {
 }
 
 .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   box-shadow: 0 4px 24px rgba(32,43,54,.12);
   padding: 8px 16px;
   position: fixed;
@@ -46,6 +42,15 @@ h1, h2, h3, h4, h5, p {
   width: 100%;
   top: 0;
   left: 0;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 930px;
+  margin: auto;
 }
 
 .header__icon {
@@ -57,6 +62,9 @@ h1, h2, h3, h4, h5, p {
 .main {
   margin-top: 60px;
   padding: 16px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card {
@@ -76,6 +84,13 @@ h1, h2, h3, h4, h5, p {
   margin-bottom: 16px;
   margin-right: 16px;
   float: left;
+}
+
+@media (min-width:600px) {
+  .emoji {
+    font-size: 30px;
+    margin-top: -8px;
+  }
 }
 
 .card__icon {
