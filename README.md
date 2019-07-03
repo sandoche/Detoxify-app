@@ -17,6 +17,7 @@
 - [x] Add an install button - https://generative.fm/
 - [ ] Hide the install button and replace by a tutorial when needed
 - [ ] Fix responsive for long titles
+- [ ] Add good OG & Twitter images
 - [ ] Add a share feature for PWA
 - [ ] Redesign homepage with new wording
 - [ ] Add latest app on the homepage 
