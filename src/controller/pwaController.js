@@ -1,10 +1,12 @@
 var express = require('express');
 var router = express.Router();
 import getAppData from '../service/appDataService'
+import config from '../config.js'
 
 router.get('/:appId', async function(req, res, next) {
   const appInfos = await getAppData(req.params.appId);
-  res.render('pwa/pwa', { data: appInfos });
+  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  res.render('pwa/pwa', { data: appInfos, config, fullUrl });
 });
 
 router.get('/:appId/manifest\.json', async function(req, res, next) {
