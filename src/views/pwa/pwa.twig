@@ -55,6 +55,7 @@
       <p>Made with ❤️ in Europe 🇪🇺<br>by <a href="http://www.sandoche.com" target="_blank">Sandoche</a> &amp; <a href="http://www.farbodsaraf.com" target="_blank">Farbod</a></p>
     </footer>
     <script>
+      // Service worker installation
       'use strict';
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
@@ -84,6 +85,7 @@
     </script>
 
     <script>
+      // Manages the counter
       var counter = document.getElementById('counter');
       var localStorage = window.localStorage;
       var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
@@ -93,6 +95,7 @@
     </script>
 
     <script>
+      // Manages the motivation text
       var motiveTextPlaceholder = document.getElementById('motive');
       var localStorage = window.localStorage;
       var motiveText = localStorage.getItem('{{ data.appId }}-motive') ? localStorage.getItem('{{ data.appId }}-motive') : 'You can now close it and safely go back to your work!';
@@ -117,7 +120,9 @@
         localStorage.setItem('{{ data.appId }}-motive', motiveInput.value);
       });
     </script>
+
     <script>
+      // Manages the Install button
       if (window.matchMedia('(display-mode: standalone)').matches) {  
         document.getElementById('install-card').style.display = 'none';
       }
@@ -138,7 +143,6 @@
           if(result.outcome === 'accepted') {
             document.getElementById('install-card').style.display = 'none';
           }
-          // window.deferredPrompt = null;
         });
       });
     </script>
