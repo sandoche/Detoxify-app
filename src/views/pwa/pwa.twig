@@ -20,10 +20,10 @@
       </div>
     </header>
     <main class="main">
-      <div class="card">
+      <div class="card" id="install-card">
         <img src="{{ data.icon }}" class="card__icon"/>
         <p class="card__text card__text--space">Don't forget to install the Progressive Web App for a better detox!</p>
-        <a href="https://www.techrepublic.com/article/how-to-use-progressive-web-apps-on-android/" class="button button--light" target="_blank">How to do it ?</a>
+        <button class="button button--light" id="install">Install</button>
       </div>
       <div class="card">
         <p class="emoji">🙌</p>
@@ -113,6 +113,27 @@
         motiveDisplay.style.display = 'block';
         motiveForm.style.display = 'none';
         localStorage.setItem('{{ data.appId }}-motive', motiveInput.value);
+      });
+    </script>
+    <script>
+      window.addEventListener('beforeinstallprompt', (event) => {
+        window.deferredPrompt = event;
+      });
+
+      var btnAdd = document.getElementById('install');
+      btnAdd.addEventListener('click', () => {
+        const promptEvent = window.deferredPrompt
+        if (!promptEvent) {
+          return;
+        }
+        promptEvent.prompt();
+
+        promptEvent.userChoice.then((result) => {
+          if(result.outcome === 'accepted') {
+            document.getElementById('install-card').style.display = 'none';
+          }
+          // window.deferredPrompt = null;
+        });
       });
     </script>
   </body>
