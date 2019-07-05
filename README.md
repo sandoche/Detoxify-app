@@ -20,7 +20,8 @@
 - [x] Add a share feature for PWA
 - [x] Catch errors
 - [x] Redesign homepage with new wording
-- [x] Add latest app on the homepage 
+- [x] Add latest app on the homepage
+
 - [ ] Add google analytics
 - [ ] Add good OG & Twitter images
 - [ ] Make it SEO Friendly
