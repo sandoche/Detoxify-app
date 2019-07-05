@@ -23,7 +23,7 @@
 - [x] Add latest app on the homepage
 - [x] Add google analytics
 - [x] Add good OG & Twitter images
-- [ ] Make it SEO Friendly
+- [x] Make it SEO Friendly
 
 - [ ] Add logo and favicon
 - [ ] Add links to Github and donations
