@@ -15,15 +15,21 @@
 - [x] Hide the guide when PWA installed - https://stackoverflow.com/questions/51735869/check-if-user-has-already-installed-pwa-to-homescreen-on-chrome
 - [x] Add container for desktop
 - [x] Add an install button - https://generative.fm/
-- [ ] Add a share feature for PWA
-- [ ] Redesign homepage with new wording
-- [ ] Add latest app on the homepage 
-- [ ] Catch errors
+- [x] Hide the install button and replace by a tutorial when needed
+- [x] Fix responsive for long titles (check Edge)
+- [x] Add a share feature for PWA
+- [x] Catch errors
+- [x] Redesign homepage with new wording
+- [x] Add latest app on the homepage 
 - [ ] Add google analytics
-- [ ] Add logo and favicon
+- [ ] Add good OG & Twitter images
 - [ ] Make it SEO Friendly
+- [ ] Add logo and favicon
+
 - [ ] Add links to Github and donations
 - [ ] Add caching
+
+- [ ] Update the wording
 - [ ] Update config.js
 - [ ] Update package.json
-- [ ] Update documentation and add a deploy to heroku feature
+- [ ] Update documentation (use a generator) and add a deploy to heroku feature

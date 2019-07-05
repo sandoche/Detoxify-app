@@ -5,12 +5,17 @@
     <h1 class="home__title">{{ config.title }}</h1>
     <p class="home__description">{{ config.description }}</p>
     <input id="search" class="search" type="text" placeholder="Search any app you would like to detox from">
-    <ol class="help">
-      <li class="help__step">Connect to this website with your mobile phone</li>
-      <li class="help__step">Use the search bar above to find the app you want to detox from</li>
-      <li class="help__step">Use the PWA feature of your phone to install the website in your phone</li>
-      <li class="help__step">If you are brave enough, uninstall the app you want to detox from</li>
-    </ol>
+    <h2 class="home__subtitle">{{ config.popular }}</h2>
+    <ul class="home__applists">
+      {% for suggestion in config.suggestions %}
+      <li class="home__app">
+        <a href="/pwa/{{ suggestion.appId }}/" class="app">
+          <img class="app__image" src="{{ suggestion.image }}" alt="Digital detox app icon for {{ suggestion.name }}">
+          <p class="app__name">{{ suggestion.name }}</p>
+        </a>      
+      </li>
+      {% endfor %}
+    </ul>
   </main>
   <footer class="container footer">
     <p>Made with ❤️ in Europe 🇪🇺 by <a href="https://www.sandoche.com" target="_blank">Sandoche</a> & <a href="https://farbodsaraf.com" target="_blank">Farbod</a>
