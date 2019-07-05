@@ -18,10 +18,10 @@
 - [x] Hide the install button and replace by a tutorial when needed
 - [x] Fix responsive for long titles (check Edge)
 - [x] Add a share feature for PWA
-- [ ] Redesign homepage with new wording
 - [x] Catch errors
+- [x] Redesign homepage with new wording
+- [x] Add latest app on the homepage 
 - [ ] Add google analytics
-- [ ] Add latest app on the homepage 
 - [ ] Add good OG & Twitter images
 - [ ] Make it SEO Friendly
 - [ ] Add logo and favicon
@@ -29,6 +29,7 @@
 - [ ] Add links to Github and donations
 - [ ] Add caching
 
+- [ ] Update the wording
 - [ ] Update config.js
 - [ ] Update package.json
 - [ ] Update documentation (use a generator) and add a deploy to heroku feature
