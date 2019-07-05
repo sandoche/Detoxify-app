@@ -32,5 +32,6 @@
 
 - [ ] Update the wording
 - [ ] Update config.js
+- [ ] Add google analytics code in config.js
 - [ ] Update package.json
 - [ ] Update documentation (use a generator) and add a deploy to heroku feature

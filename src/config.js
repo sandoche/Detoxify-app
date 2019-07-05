@@ -7,6 +7,7 @@ const config = {
   share: 'Use this app to detox from ',
   popular: 'Most popular',
   pwa_tutorial: 'https://www.idownloadblog.com/2018/07/19/howto-progressive-web-apps-iphone-ipad/',
+  google_analytics: 'XX-TEMP',
   suggestions: [
     {
       name: 'Facebook',
