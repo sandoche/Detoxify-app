@@ -24,7 +24,6 @@
 - [x] Add google analytics
 - [x] Add good OG & Twitter images
 - [x] Make it SEO Friendly
-
 - [ ] Add logo and favicon
 - [ ] Add links to Github and donations
 - [ ] Update the wording
@@ -33,3 +32,4 @@
 - [ ] Update package.json
 - [ ] Update documentation (use a generator) and add a deploy to heroku feature
 - [ ] Add caching
+- [ ] Update links and github name and description
