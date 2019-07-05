@@ -5,8 +5,11 @@ const config = {
   long_description: 'Use AppDetox to help you detox from any addictive app',
   keywords: 'digital detox, detox, pwa',
   share: 'Use this app to detox from ',
+  og_title: ' Fake detox app',
+  og_description: 'An fake app to help you detox from ',
   popular: 'Most popular',
   pwa_tutorial: 'https://www.idownloadblog.com/2018/07/19/howto-progressive-web-apps-iphone-ipad/',
+  google_analytics: 'XX-TEMP',
   suggestions: [
     {
       name: 'Facebook',

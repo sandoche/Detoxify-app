@@ -21,16 +21,15 @@
 - [x] Catch errors
 - [x] Redesign homepage with new wording
 - [x] Add latest app on the homepage
-
-- [ ] Add google analytics
-- [ ] Add good OG & Twitter images
-- [ ] Make it SEO Friendly
+- [x] Add google analytics
+- [x] Add good OG & Twitter images
+- [x] Make it SEO Friendly
 - [ ] Add logo and favicon
-
 - [ ] Add links to Github and donations
-- [ ] Add caching
-
 - [ ] Update the wording
 - [ ] Update config.js
+- [ ] Add google analytics code in config.js
 - [ ] Update package.json
 - [ ] Update documentation (use a generator) and add a deploy to heroku feature
+- [ ] Add caching
+- [ ] Update links and github name and description

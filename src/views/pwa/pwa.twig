@@ -9,6 +9,30 @@
     <link rel="apple-touch-icon" sizes="512x512" href="{{ data.icon }}">
     <link rel="icon" type="image/png" href="{{ data.icon }}" />
     <link href='/stylesheets/pwa.css' rel='stylesheet'/> 
+
+    <meta content="{{ config.og_description }}{{ data.title }}" name="description"/>
+    <meta content="{{ config.keywords }}, {{ data.title }}, {{ data.title }} detox, digital detox {{ data.title }}" name="keywords"/>
+    <meta content="Sandoche ADITTANE & Farbod SARAF" name="author">
+    <link href="{{ fullUrl }}" rel="canonical"/>
+    <meta content="all, follow" name="robots"/>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="{{ data.icon }}">
+    <meta name="twitter:site" content="@farbodsaraf">
+    <meta name="twitter:title" content="{{ data.title }}{{ config.og_title }}">
+    <meta name="twitter:description" content="{{ config.og_description }} {{ data.title }}">
+    <meta name="twitter:creator" content="@farbodsaraf">
+    <meta name="twitter:image:src" content="{{ data.icon }}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ data.title }}{{ config.og_title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ fullUrl }}" />
+    <meta property="og:image" content="favicon.png" />
+    <meta property="og:description" content="{{ config.og_description }}{{ data.title }}" />
+    <meta property="og:site_name" content="{{ data.title }}{{ config.og_title }}" />
+    <meta property="og:locale" content="en_US"/>
+
   </head>
   <body>
     <header class="header">
@@ -169,5 +193,6 @@
           shareButton.addEventListener('click', share);    
       }
     </script>
+    {% include '../partials/google-analytics.twig' %}
   </body>
 </html>

@@ -12,17 +12,24 @@
     <meta content="all, follow" name="robots"/>
     <link href="favicon.png" rel="shortcut icon">
     <link href="favicon.png" rel="icon" type="image/x-icon"/>
-    <meta content="en_US" property="og:locale"/>
-    <meta content="website" property="og:type"/>
-    <meta content="{{ config.title }}" property="og:title"/>
-    <meta content="{{ config.description }}" property="og:description"/>
-    <meta content="{{ url }}" property="og:url"/>
-    <meta content="{{ config.title }}" property="og:site_name"/>
-    <meta content="favicon.png" property="og:image"/>
-    <meta content="{{ config.long_description }}" name="twitter:card"/>
-    <meta content="{{ config.description }}" name="twitter:description"/>
-    <meta content="{{ config.title }}" name="twitter:title"/>
-    <meta content="favicon.png" name="twitter:image"/>
+
+   <!-- Twitter Card data -->
+    <meta name="twitter:card" content="favicon.png">
+    <meta name="twitter:site" content="@farbodsaraf">
+    <meta name="twitter:title" content="{{ config.title }}">
+    <meta name="twitter:description" content="{{ config.description }}">
+    <meta name="twitter:creator" content="@farbodsaraf">
+    <meta name="twitter:image:src" content="favicon.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ config.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url }}" />
+    <meta property="og:image" content="favicon.png" />
+    <meta property="og:description" content="{{ config.description }}" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:locale" content="en_US"/>
+
     <link href='/stylesheets/style.css' rel='stylesheet'/> 
     {% block style %}{% endblock %}
   </head>
