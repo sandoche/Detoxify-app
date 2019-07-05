@@ -4,7 +4,9 @@
   <main class="home container">
     <h1 class="home__title">{{ config.title }}</h1>
     <p class="home__description">{{ config.description }}</p>
-    <input id="search" class="search" type="text" placeholder="Search any app you would like to detox from">
+    <div class="card">
+      <input id="search" class="search" type="text" placeholder="Search any app you would like to detox from">
+    </div>
     <h2 class="home__subtitle">{{ config.popular }}</h2>
     <ul class="home__applists">
       {% for suggestion in config.suggestions %}
