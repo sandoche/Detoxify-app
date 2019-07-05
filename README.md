@@ -22,8 +22,7 @@
 - [x] Redesign homepage with new wording
 - [x] Add latest app on the homepage
 - [x] Add google analytics
-
-- [ ] Add good OG & Twitter images
+- [x] Add good OG & Twitter images
 - [ ] Make it SEO Friendly
 
 - [ ] Add logo and favicon
