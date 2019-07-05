@@ -25,8 +25,8 @@
 
 - [ ] Add good OG & Twitter images
 - [ ] Make it SEO Friendly
-- [ ] Add logo and favicon
 
+- [ ] Add logo and favicon
 - [ ] Add links to Github and donations
 - [ ] Update the wording
 - [ ] Update config.js
