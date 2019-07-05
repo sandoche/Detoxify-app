@@ -6,6 +6,7 @@ const config = {
   keywords: 'digital detox, detox, pwa',
   share: 'Use this app to detox from ',
   popular: 'Most popular',
+  pwa_tutorial: 'https://www.idownloadblog.com/2018/07/19/howto-progressive-web-apps-iphone-ipad/',
   suggestions: [
     {
       name: 'Facebook',
