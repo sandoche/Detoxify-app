@@ -19,7 +19,7 @@
 - [x] Fix responsive for long titles (check Edge)
 - [x] Add a share feature for PWA
 - [ ] Redesign homepage with new wording
-- [ ] Catch errors
+- [x] Catch errors
 - [ ] Add google analytics
 - [ ] Add latest app on the homepage 
 - [ ] Add good OG & Twitter images
