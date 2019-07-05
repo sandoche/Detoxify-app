@@ -48,7 +48,6 @@ input {
   border: 1px solid var(--color-grey-medium);
   border-radius: 3px;
   padding: 12px 20px;
-  box-shadow: 0 10px 30px 0 rgba(0,0,0,.05);
 }
 
 input:focus {
@@ -107,10 +106,6 @@ input:focus {
   margin-right: 8px;
   border-radius: 3px;
   object-fit: cover;
-}
-
-.search {
-  margin-bottom: 32px;
 }
 
 .footer {
@@ -190,4 +185,12 @@ input:focus {
   font-weight: bold;
   font-size: var(--font-size-sm);
   margin-top: 0;
+}
+
+.card {
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 24px;
+  margin-bottom: 64px;
+  box-shadow: 0 4px 24px rgba(32,43,54,.08);
 }
