@@ -44,6 +44,12 @@ h1, h2, h3, h4, h5, p {
   left: 0;
 }
 
+.header__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .header__container {
   display: flex;
   flex-direction: row;
@@ -51,6 +57,11 @@ h1, h2, h3, h4, h5, p {
   align-items: center;
   max-width: 930px;
   margin: auto;
+}
+
+.header__icons {
+  min-width: 150px;
+  text-align: right;
 }
 
 .header__icon {
