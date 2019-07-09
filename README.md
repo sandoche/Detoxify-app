@@ -48,5 +48,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2019 [Sandoche ADITTANE & Farbod SARAF](https://github.com/sandoche).<br />
+Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(https://farbodsaraf.com/)<br />
 This project is [Apache 2.0](/LICENSE) licensed.
