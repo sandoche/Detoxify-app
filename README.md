@@ -15,6 +15,7 @@ Detoxify.app is a website to generate a fake of any app to replace it and help y
 It is built with `Express.js` and uses `google-play-scraper` package to search in Google Play Store and to get the metadata.
 
 ### 👉 [Get started](https://detoxify.app)
+<br>
 
 ## 📖 How to use
 
