@@ -1,40 +1,46 @@
-# Detox-pwa
-🙈 Generate a PWA to replace your apps and succeed in your digital detox
+<h1 align="center">Welcome to Detoxify 👋</h1>
+<p>
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="/LICENCE">
+    <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" target="_blank" />
+  </a>
+  <a href="https://twitter.com/farbodsaraf">
+    <img alt="Twitter: farbodsaraf" src="https://img.shields.io/twitter/follow/farbodsaraf.svg?style=social" target="_blank" />
+  </a>
+</p>
 
-## To do
-- [x] Fix bug iphone
-- [x] Implement search service
-- [x] Implement search controller
-- [x] Implement homepage with search
-- [x] Implement homepage style & loading animation
-- [x] Implement native library caching
-- [x] Add PWA style
-- [x] Add the count of PWA and feature for adding a custom message
-- [x] Add a guide to install it
-- [x] Add button to add another app
-- [x] Hide the guide when PWA installed - https://stackoverflow.com/questions/51735869/check-if-user-has-already-installed-pwa-to-homescreen-on-chrome
-- [x] Add container for desktop
-- [x] Add an install button - https://generative.fm/
-- [x] Hide the install button and replace by a tutorial when needed
-- [x] Fix responsive for long titles (check Edge)
-- [x] Add a share feature for PWA
-- [x] Catch errors
-- [x] Redesign homepage with new wording
-- [x] Add latest app on the homepage
-- [x] Add google analytics
-- [x] Add good OG & Twitter images
-- [x] Make it SEO Friendly
-- [x] Add logo and favicon
-- [ ] Prepare commuication material
-- [ ] Update documentation (use a generator) and add a deploy to heroku feature
-- [ ] Set up domain name
-- [ ] Create gif
-- [ ] Add tutorial to install in iOS
-- [ ] Add links to Github and donations
-- [ ] Update the wording
-- [ ] Update config.js
-- [ ] Add google analytics code in config.js
-- [ ] Update package.json
-- [ ] Add caching
-- [ ] Update links and github name and description
-- [ ] Share the score in the message
+> Generate a fake app to replace any addictive app 📱🙅
+
+### 🏠 [Homepage](https://detoxify.app)
+
+## Install
+
+```sh
+npm install
+```
+
+## Usage
+
+```sh
+npm run start
+```
+
+## Author
+
+👤 **Sandoche ADITTANE & Farbod SARAF**
+
+* Twitter: [@farbodsaraf](https://twitter.com/farbodsaraf)
+* Github: [@sandoche](https://github.com/sandoche)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2019 [Sandoche ADITTANE & Farbod SARAF](https://github.com/sandoche).<br />
+This project is [Apache 2.0](/LICENCE) licensed.
