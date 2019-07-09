@@ -1,7 +1,7 @@
 <p align="center">
-  <img src="/src/public/images/icon.png" width="200">
+  <img src="/src/public/images/icon.png" width="150">
 </p>
-<h1 align="center">Welcome to Detoxify 👋</h1>
+<h1 align="center">Detoxify</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="/LICENSE">
