@@ -61,8 +61,6 @@ Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(
 This project is [Apache 2.0](/LICENSE) licensed.
 
 ## Todo
-- [ ] Update documentation (use a generator) and add a deploy to heroku feature
-- [ ] Set up domain name
 - [ ] Create gif
 - [ ] Add tutorial to install in iOS
 - [ ] Add links to Github and donations
