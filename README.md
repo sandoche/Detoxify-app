@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to Detoxify 👋</h1>
 <p>
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="/LICENCE">
+  <a href="/LICENSE">
     <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" target="_blank" />
   </a>
   <a href="https://twitter.com/farbodsaraf">
@@ -25,6 +25,12 @@ npm install
 npm run start
 ```
 
+## Development
+
+```sh
+npm run dev
+```
+
 ## Author
 
 👤 **Sandoche ADITTANE & Farbod SARAF**
@@ -34,7 +40,7 @@ npm run start
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](/issues).
+Contributions, issues and feature requests are welcome!
 
 ## Show your support
 
@@ -43,4 +49,4 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2019 [Sandoche ADITTANE & Farbod SARAF](https://github.com/sandoche).<br />
-This project is [Apache 2.0](/LICENCE) licensed.
+This project is [Apache 2.0](/LICENSE) licensed.
