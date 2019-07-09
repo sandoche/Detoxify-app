@@ -6,7 +6,7 @@ import config from '../config.js'
 router.get('/:appId', async function (req, res, next) {
   try {
     const appInfos = await getAppData(req.params.appId);
-    const protocol = req.connection.encrypted ? 'https' : 'http';
+    const protocol = req.headers['x-forwarded-proto'] ? 'https' : 'http';
     const fullUrl = protocol + '://' + req.get('host') + req.originalUrl;
     res.render('pwa/pwa', { data: appInfos, config, fullUrl });
   } catch (e) {
