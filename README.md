@@ -25,6 +25,7 @@
 - [x] Add good OG & Twitter images
 - [x] Make it SEO Friendly
 - [ ] Add logo and favicon
+- [ ] Prepare commuication material
 - [ ] Update documentation (use a generator) and add a deploy to heroku feature
 - [ ] Set up domain name
 - [ ] Create gif
