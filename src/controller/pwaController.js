@@ -6,7 +6,8 @@ import config from '../config.js'
 router.get('/:appId', async function (req, res, next) {
   try {
     const appInfos = await getAppData(req.params.appId);
-    const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+    const protocol = req.connection.encrypted ? 'https' : 'http';
+    const fullUrl = protocol + '://' + req.get('host') + req.originalUrl;
     res.render('pwa/pwa', { data: appInfos, config, fullUrl });
   } catch (e) {
     res.status(e.status)
@@ -44,7 +45,7 @@ router.get('/:appId/service-worker\.js', function (req, res, next) {
     // Names of the two caches used in this version of the service worker.
     // Change to v2, etc. when you update any of the local resources, which will
     // in turn trigger the install event again.
-    const PRECACHE = '${req.params.appId}-precache-v3';
+    const PRECACHE = '${req.params.appId}-precache-v4';
     const RUNTIME = 'runtime';
     
     // A list of local resources we always want to be cached.

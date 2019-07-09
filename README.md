@@ -24,6 +24,7 @@
 - [x] Add google analytics
 - [x] Add good OG & Twitter images
 - [x] Make it SEO Friendly
+- [ ] Share the score in the message
 - [ ] Add logo and favicon
 - [ ] Add links to Github and donations
 - [ ] Update the wording

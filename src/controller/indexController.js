@@ -3,7 +3,8 @@ var router = express.Router();
 import config from '../config.js'
 
 router.get('/', function(req, res, next) {
-  const fullUrl = req.protocol + '://' + req.get('host') + req.originalUrl;
+  const protocol = req.connection.encrypted ? 'https' : 'http';
+  const fullUrl = protocol + '://' + req.get('host') + req.originalUrl;
   res.render('index', { config, url: fullUrl });
 });
 
