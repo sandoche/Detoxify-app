@@ -17,7 +17,7 @@
   --font-family-titles: 'gilroy-extrabold', 'Roboto', 'Helvetica', 'Arial', Sans-serif;
   --font-family-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 
-  --font-size-xl: 52px;
+  --font-size-xl: 42px;
   --font-size-lg: 24px;
   --font-size-md: 18px;
   --font-size-sm: 14px;
@@ -56,6 +56,17 @@ input:focus {
   border-radius: 3px; 
 }
 
+.home__icon {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.icon {
+  width: 128px;
+  height: auto;
+  margin: auto;
+}
+
 /* Shared */
 
 .accent {
@@ -85,6 +96,7 @@ input:focus {
   text-align: center;
   font-family: var(--font-family-titles);
   font-size: var(--font-size-xl);
+  margin-top: 0;
 }
 
 .home__description {
