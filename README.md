@@ -9,9 +9,12 @@
   </a>
 </p>
 
-> Generate a fake app to replace any addictive app 📱🙅
+Generate a fake app to replace any addictive app 📱🙅
 
-### 🏠 [Homepage](https://detoxify.app)
+Detoxify.app is a website to generate a fake of any app to replace it and help you in your digital detox process.
+It is built with `Express.js` and uses `google-play-scraper` package to search in Google Play Store and to get the metadata.
+
+### 🏠 [Get started](https://detoxify.app)
 
 ## Install
 
