@@ -16,19 +16,21 @@ It is built with `Express.js` and uses `google-play-scraper` package to search i
 
 ### 👉 [Get started](https://detoxify.app)
 
-## Install
+## 📖 How to use
+
+### Install
 
 ```sh
 npm install
 ```
 
-## Usage
+### Usage
 
 ```sh
 npm run start
 ```
 
-## Development
+### Development
 
 ```sh
 npm run dev
@@ -45,7 +47,7 @@ npm run dev
 
 Contributions, issues and feature requests are welcome!
 
-## Show your support
+## ⭐️ Show your support
 
 Give a ⭐️ if this project helped you!
 
@@ -53,3 +55,17 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(https://farbodsaraf.com/)<br />
 This project is [Apache 2.0](/LICENSE) licensed.
+
+## Todo
+- [ ] Update documentation (use a generator) and add a deploy to heroku feature
+- [ ] Set up domain name
+- [ ] Create gif
+- [ ] Add tutorial to install in iOS
+- [ ] Add links to Github and donations
+- [ ] Update the wording
+- [ ] Update config.js
+- [ ] Add google analytics code in config.js
+- [ ] Update package.json
+- [ ] Add caching
+- [ ] Update links and github name and description
+- [ ] Share the score in the message
