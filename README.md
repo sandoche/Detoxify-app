@@ -28,6 +28,7 @@
 - [ ] Update documentation (use a generator) and add a deploy to heroku feature
 - [ ] Set up domain name
 - [ ] Create gif
+- [ ] Add tutorial to install in iOS
 - [ ] Add links to Github and donations
 - [ ] Update the wording
 - [ ] Update config.js
