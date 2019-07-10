@@ -214,6 +214,12 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 80%, rgba(255,255,255,0) 100%);  
+  position: sticky;
+  top: -30px;
+  margin: -30px;
+  padding: 30px;
 }
 
 .modal__title {
@@ -222,7 +228,6 @@ input:focus {
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #00449e;
   box-sizing: border-box;
 }
 
@@ -330,4 +335,14 @@ input:focus {
 .micromodal-slide .modal__container,
 .micromodal-slide .modal__overlay {
   will-change: transform;
+}
+
+.modal__footer {
+  text-align: right;
+}
+
+@media (max-width:720px) {
+  .modal__container {
+    border-radius: 0 !important;
+  }
 }
