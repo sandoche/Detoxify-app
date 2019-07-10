@@ -8,8 +8,7 @@ const config = {
   og_title: ' Fake detox app',
   og_description: 'An fake app to help you detox from ',
   popular: 'Most popular',
-  pwa_tutorial: 'https://www.idownloadblog.com/2018/07/19/howto-progressive-web-apps-iphone-ipad/',
-  google_analytics: 'XX-TEMP',
+  google_analytics: 'UA-143582756-1',
   suggestions: [
     {
       name: 'Facebook',
