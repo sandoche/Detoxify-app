@@ -49,7 +49,7 @@
       <div class="card" id="install-card">
         <img src="{{ data.icon }}" class="card__icon"/>
         <p class="card__text card__text--space">Don't forget to install the Progressive Web App for a better detox!</p>
-        <a href="{{ config.pwa_tutorial }}" target="_blank" class="button button--light" id="how-to-install">Install</a>
+        <a target="_blank" class="button button--light" id="how-to-install" data-micromodal-trigger="modal-1">Install</a>
         <button class="button button--light" id="install" style="display: none;">Install</button>
       </div>
       <div class="card">
@@ -79,6 +79,9 @@
     <footer class="footer">
       <p>Made with ❤️ in Europe 🇪🇺<br>by <a href="http://www.sandoche.com" target="_blank">Sandoche</a> &amp; <a href="http://www.farbodsaraf.com" target="_blank">Farbod</a></p>
     </footer>
+    
+    {% include '../partials/guide-modal.twig' %}
+
     <script>
       // Service worker installation
       'use strict';

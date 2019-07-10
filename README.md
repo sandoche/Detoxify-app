@@ -1,39 +1,65 @@
-# Detox-pwa
-🙈 Generate a PWA to replace your apps and succeed in your digital detox
+<p align="center">
+  <img src="/src/public/images/icon.png" width="150">
+</p>
+<h1 align="center">Detoxify</h1>
+<p>
+  <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="/LICENSE">
+    <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" target="_blank" />
+  </a>
+  <a href="https://twitter.com/farbodsaraf">
+    <img alt="Twitter: farbodsaraf" src="https://img.shields.io/twitter/follow/farbodsaraf.svg?style=social" target="_blank" />
+  </a>
+</p>
 
-## To do
-- [x] Fix bug iphone
-- [x] Implement search service
-- [x] Implement search controller
-- [x] Implement homepage with search
-- [x] Implement homepage style & loading animation
-- [x] Implement native library caching
-- [x] Add PWA style
-- [x] Add the count of PWA and feature for adding a custom message
-- [x] Add a guide to install it
-- [x] Add button to add another app
-- [x] Hide the guide when PWA installed - https://stackoverflow.com/questions/51735869/check-if-user-has-already-installed-pwa-to-homescreen-on-chrome
-- [x] Add container for desktop
-- [x] Add an install button - https://generative.fm/
-- [x] Hide the install button and replace by a tutorial when needed
-- [x] Fix responsive for long titles (check Edge)
-- [x] Add a share feature for PWA
-- [x] Catch errors
-- [x] Redesign homepage with new wording
-- [x] Add latest app on the homepage
-- [x] Add google analytics
-- [x] Add good OG & Twitter images
-- [x] Make it SEO Friendly
-- [ ] Add logo and favicon
-- [ ] Update documentation (use a generator) and add a deploy to heroku feature
-- [ ] Set up domain name
-- [ ] Create gif
-- [ ] Add tutorial to install in iOS
-- [ ] Add links to Github and donations
-- [ ] Update the wording
-- [ ] Update config.js
-- [ ] Add google analytics code in config.js
-- [ ] Update package.json
-- [ ] Add caching
-- [ ] Update links and github name and description
-- [ ] Share the score in the message
+Generate a fake app to replace any addictive app 📱🙅
+
+Detoxify.app is a website to generate a fake of any app to replace it and help you in your digital detox process.
+It is built with `Express.js` and uses `google-play-scraper` package to search in Google Play Store and to get the metadata.
+
+### 👉 [Get started](https://detoxify.app)
+<br>
+
+## 📖 How to use
+
+### Install
+
+```sh
+npm install
+```
+
+### Usage
+
+```sh
+npm run start
+```
+
+### Development
+
+```sh
+npm run dev
+```
+
+### Deploy to Heroku
+Since this project scraps data from Google Play, the number of queries are limited per server, therefore in case of problem we recommend you to host your own instance of Detofixy.<br><br>
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+## Authors
+
+👤 **Sandoche ADITTANE & Farbod SARAF**
+
+* Twitter: [@farbodsaraf](https://twitter.com/farbodsaraf)
+* Github: [@sandoche](https://github.com/sandoche)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!
+
+## ⭐️ Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(https://farbodsaraf.com/)<br />
+This project is [Apache 2.0](/LICENSE) licensed.
