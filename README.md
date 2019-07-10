@@ -63,7 +63,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(https://farbodsaraf.com/)<br />
 This project is [Apache 2.0](/LICENSE) licensed.
-
-## Todo
-- [ ] Rename the repository
-- [ ] Update package.json and add description

@@ -1,7 +1,7 @@
 {
   "name": "detoxify",
+  "description": "Generate a fake app to replace any addictive app 📱🙅",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/dev -e js,twig --exec babel-node --presets es2015,env",
@@ -10,6 +10,17 @@
     "clean": "rm -rf build && mkdir build",
     "build": "npm run clean && npm run transpile && npm run copy-assets"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleygwilliams/my_package.git"
+  },
+  "keywords": ["digital-detox", "detox", "progressive-web-app", "pwa-apps", "pwa", "detoxify"],
+  "author": "Sandoche ADITTANE & Farbod SARAF",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/sandoche/Detoxify-app/issues"
+  },
+  "homepage": "https://detoxify.app/",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
