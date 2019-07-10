@@ -65,12 +65,7 @@ Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(
 This project is [Apache 2.0](/LICENSE) licensed.
 
 ## Todo
-- [ ] Add tutorial to install in iOS
-- [ ] Add links to Github and donations
-- [ ] Update the wording
-- [ ] Update config.js
+- [ ] Add tutorial to install in iOS <
 - [ ] Add google analytics code in config.js
-- [ ] Update package.json
-- [ ] Add caching
-- [ ] Update links and github name and description
-- [ ] Share the score in the message
+- [ ] Rename the repository
+- [ ] Update package.json and add description
