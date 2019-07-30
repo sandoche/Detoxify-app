@@ -52,6 +52,13 @@
         <a target="_blank" class="button button--light" id="how-to-install" data-micromodal-trigger="modal-1">Install</a>
         <button class="button button--light" id="install" style="display: none;">Install</button>
       </div>
+      <div class="card" id="donate-card">
+        <p class="emoji-block">❤️</p>
+        <p class="card__text card__text--space" id="donate-message">
+          For us, in order to be able to cover our server costs, we ask our users to contribute a tiny amount if they find the app useful.
+        </p>
+        <a href="https://www.buymeacoffee.com/detoxify" class="button button--light" target="_blank" id="donate-button">Donate</a>
+      </div>
       <div class="card">
         <p class="emoji">🙌</p>
         <p class="card__text">Well done you opened {{ data.title }} detox app <strong><span id="counter">1</span> time</strong>!</strong></p>
@@ -65,11 +72,6 @@
           <input type="text" id="motive-input" class="card__text--space">
           <button class="button button--light">Save</button>
         </form>
-      </div>
-      <div class="card">
-        <p class="emoji">❤️</p>
-        <p class="card__text card__text--space">Like this App ?<br>Donate to show your love.</p>
-        <a href="https://www.buymeacoffee.com/detoxify" class="button button--light" target="_blank">Donate</a>
       </div>
       <div class="card">
         <p class="card__text card__text--space">This project is open source, feel free to contribute.</p>
@@ -118,8 +120,23 @@
       var localStorage = window.localStorage;
       var counterValue = localStorage.getItem('{{ data.appId }}-counter') ? localStorage.getItem('{{ data.appId }}-counter') : 0;
       counterValue++;
+  
       counter.innerHTML = counterValue;
       localStorage.setItem('{{ data.appId }}-counter', counterValue);
+
+      // Manage the donation message
+      var userDonated = JSON.parse(localStorage.getItem('donation'));
+      var donateMessage = document.getElementById('donate-message');
+      var donateButton = document.getElementById('donate-button');
+      var donateCard = document.getElementById('donate-card');
+
+      donateButton.addEventListener('click', function() {
+        localStorage.setItem('donation', true);
+      });
+
+      if (userDonated || counterValue < 2) {
+        donateCard.style.display = 'none';
+      }
     </script>
 
     <script>
