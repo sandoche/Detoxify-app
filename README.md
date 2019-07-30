@@ -65,5 +65,5 @@ If you like this project, feel free to donate: https://www.buymeacoffee.com/deto
 
 ## 📝 License
 
-Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(https://farbodsaraf.com/)<br />
+Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF](https://farbodsaraf.com/)<br />
 This project is [Apache 2.0](/LICENSE) licensed.
