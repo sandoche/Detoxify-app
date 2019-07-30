@@ -59,6 +59,10 @@ Contributions, issues and feature requests are welcome!
 
 Give a ⭐️ if this project helped you!
 
+## ☕️ Buy me a coffee 
+
+If you like this project, feel free to donate: https://www.buymeacoffee.com/detoxify
+
 ## 📝 License
 
 Copyright © 2019 [Sandoche ADITTANE](https://www.sandoche.com) & [Farbod SARAF(https://farbodsaraf.com/)<br />
