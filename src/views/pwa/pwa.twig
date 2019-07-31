@@ -60,11 +60,11 @@
         <a href="https://www.buymeacoffee.com/detoxify" class="button button--light" target="_blank" id="donate-button">Donate</a>
       </div>
       <div class="card">
-        <p class="emoji">🙌</p>
-        <p class="card__text">Well done you opened {{ data.title }} detox app <strong><span id="counter">1</span> time</strong>!</strong></p>
+        <p class="emoji blurable">🙌</p>
+        <p class="card__text blurable">Well done you opened {{ data.title }} detox app <strong><span id="counter">1</span> time</strong>!</strong></p>
       </div>
       <div class="card">
-        <p class="card__text" id="motive-display">
+        <p class="card__text blurable" id="motive-display">
           <strong id="motive">You can now close it and safely go back to your work!</strong>
           <span class="edit-button" id="edit"><svg role="img" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24" aria-labelledby="newIconTitle" stroke="#2329D6" stroke-width="1" stroke-linecap="square" stroke-linejoin="miter" fill="none" color="#2329D6"> <title id="newIconTitle">New</title> <path d="M19 14V22H2.99997V4H13"/> <path d="M17.4608 4.03921C18.2418 3.25817 19.5082 3.25816 20.2892 4.03921L20.9608 4.71079C21.7418 5.49184 21.7418 6.75817 20.9608 7.53921L11.5858 16.9142C11.2107 17.2893 10.702 17.5 10.1716 17.5L7.5 17.5L7.5 14.8284C7.5 14.298 7.71071 13.7893 8.08579 13.4142L17.4608 4.03921Z"/> <path d="M16.25 5.25L19.75 8.75"/> </svg></span>
         </p>
@@ -141,6 +141,11 @@
 
       if (userDonated || counterValue < 2) {
         donateCard.style.display = 'none';
+      } else {
+        const blurableItems = document.querySelectorAll('.blurable');
+        for (const item of blurableItems) {
+          item.style.filter = 'blur(10px)'
+        }
       }
     </script>
 
