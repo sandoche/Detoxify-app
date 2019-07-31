@@ -127,6 +127,7 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
+  margin-bottom: 32px;
 }
 
 .loader {
