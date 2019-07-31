@@ -34,6 +34,8 @@ h1, h2, h3, h4, h5, p {
   margin: 0;
 }
 
+a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
+
 .header {
   box-shadow: 0 4px 24px rgba(32,43,54,.12);
   padding: 8px 16px;
@@ -140,13 +142,13 @@ h1, h2, h3, h4, h5, p {
 }
 
 .button--light {
-  color: var(--color-grey-dark);
+  color: var(--color-grey-dark) !important;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 .button--light:hover {
-  color: var(--color-grey-dark);
+  color: var(--color-grey-dark) !important;
   background-color: #e2e6ea;
   border-color: #e2e6ea;
 }

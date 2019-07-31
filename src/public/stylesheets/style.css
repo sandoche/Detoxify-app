@@ -56,6 +56,8 @@ input:focus {
   border-radius: 3px; 
 }
 
+a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
+
 .home__icon {
   text-align: center;
   margin-top: 32px;
@@ -125,6 +127,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   margin-top: 64px;
+  margin-bottom: 32px;
 }
 
 .loader {
@@ -157,7 +160,7 @@ input:focus {
 }
 
 .button--light {
-  color: var(--color-grey-dark);
+  color: var(--color-grey-dark) !important;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
