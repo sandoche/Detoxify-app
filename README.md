@@ -46,7 +46,7 @@ npm run dev
 ```
 
 ### Deploy to Heroku
-Since this project scraps data from Google Play, the number of queries are limited per server, therefore in case of problem we recommend you to host your own instance of Detofixy.<br><br>
+Since this project scraps data from Google Play, the number of queries are limited per server, therefore in case of problem we recommend you to host your own instance of Detoxify.<br><br>
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Authors
