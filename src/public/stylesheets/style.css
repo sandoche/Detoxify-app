@@ -221,5 +221,5 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
 
 #mc_embed_signup input.email {
   width: 100% !important; 
-  margin-right: 8px;
+  margin-right: 4px !important;
 }
