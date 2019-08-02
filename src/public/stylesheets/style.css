@@ -209,3 +209,17 @@ a, a:link, a:hover, a:visited, a:active {color: var(--color-blue);}
   margin-bottom: 64px;
   box-shadow: 0 4px 24px rgba(32,43,54,.08);
 }
+
+.newsletter-section {
+  margin-top: 64px;
+}
+
+#mc_embed_signup_scroll {
+  display: flex;
+  width: 100%;
+}
+
+#mc_embed_signup input.email {
+  width: 100% !important; 
+  margin-right: 4px !important;
+}
