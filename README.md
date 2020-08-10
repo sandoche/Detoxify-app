@@ -8,7 +8,7 @@
     <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" target="_blank" />
   </a>
 
-  <a href="https://t.me/coin_generator">
+  <a href="https://t.me/detoxify_app">
     <img alt="Telegram" src="https://img.shields.io/badge/chat-Telegram-blue.svg" target="_blank" />
   </a>
 
