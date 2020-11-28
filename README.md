@@ -3,6 +3,7 @@
 </p>
 <h1 align="center">Detoxify</h1>
 <p>
+  <a href="https://github.com/humanetech-community/awesome-humane-tech"><img src="https://raw.githubusercontent.com/humanetech-community/awesome-humane-tech/main/humane-tech-badge.svg?sanitize=true" alt="Awesome Humane Tech" style="max-width:100%;"></a>
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="/LICENSE">
     <img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache 2.0-yellow.svg" target="_blank" />
